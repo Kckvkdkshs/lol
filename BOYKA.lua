@@ -159,7 +159,7 @@ io.popen("mkdir File_Bot")
 io.popen("cd File_Bot && rm -rf commands.lua.1") 
 io.popen("cd File_Bot && rm -rf commands.lua.2") 
 io.popen("cd File_Bot && rm -rf commands.lua.3") 
-io.popen("cd File_Bot && wget https://raw.githubusercontent.com/mostafaaziza/tefa/master/File_Bot/commands.lua") 
+io.popen("cd File_Bot && wget https://raw.githubusercontent.com/black801/lol/master/File_Bot/commands.lua") 
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
@@ -1011,7 +1011,7 @@ end
 
 if text == 'تحديث السورس ✪' and SudoBot(msg) then 
 os.execute('rm -rf BOYKA.lua')
-os.execute('wget https://raw.githubusercontent.com/lajarih/abdo/master/BOYKA.lua')
+os.execute('wget https://raw.githubusercontent.com/black801/lol/master/BOYKA.lua')
 send(msg.chat_id_, msg.id_,' ✪ تم تحديث السورس \n ✪ لديك اخر اصدار ل𝐒𝐎𝐔𝐑𝐂𝐄 𝐒𝐀𝐃𝐌𝐎𝐎𝐍\n ✪ الاصدار » { 1.3v}')
 dofile('BOYKA.lua')  
 end
@@ -2262,7 +2262,7 @@ end
 return false
 end
 os.execute('rm -rf BOYKA.lua')
-os.execute('wget https://raw.githubusercontent.com/lajarih/abdo/master/BOYKA.lua')
+os.execute('wget https://raw.githubusercontent.com/black801/lol/master/BOYKA.lua')
 send(msg.chat_id_, msg.id_,' ✪ تم تحديث السورس \n ✪ لديك اخر اصدار ل𝐒𝐎𝐔𝐑𝐂𝐄 𝐒𝐀𝐃𝐌𝐎𝐎𝐍\n ✪ الاصدار » { 1.3v}')
 dofile('BOYKA.lua')  
 end
@@ -3800,7 +3800,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if SudoBot(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/mostafaaziza/tefa/master/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/black801/lol/master/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -3838,7 +3838,7 @@ t = " ✪ الملف » "..file.."\n ✪ تم تعطيل ملف \n"
 else
 t = " ✪ بالتاكيد تم تعطيل ملف → "..file.."\n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/mostafaaziza/tefa/master/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/black801/lol/master/File_Bot/"..file)
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
@@ -3858,7 +3858,7 @@ t = " ✪ بالتاكيد تم تفعيل ملف → "..file.." \n"
 else
 t = " ✪ الملف » "..file.."\n ✪ تم تفعيل ملف \n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/mostafaaziza/tefa/master/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/black801/lol/master/File_Bot/"..file)
 if res == 200 then
 local chek = io.open("File_Bot/"..file,'w+')
 chek:write(json_file)
@@ -12934,7 +12934,7 @@ end
 if text == "نسبه الحب" or text == "نسبه حب" and msg.reply_to_message_id_ ~= 0 and Addictive(msg) then
 if not database:get(bot_id..'Cick:lov'..msg.chat_id_) then
 database:set(bot_id..":"..msg.sender_user_id_..":lov_Bots"..msg.chat_id_,"sendlove")
-Text = 'ارسل اسمك واسم الشخص الثاني،  \n مثال اروي و مصطفي '
+Text = 'ارسل اسمك واسم الشخص الثاني،  \n مثال نهي و ليجاند '
 send(msg.chat_id_, msg.id_,Text) 
 end
 end
@@ -12948,7 +12948,7 @@ end
 if text == "نسبه الكره" or text == "نسبه كره" and msg.reply_to_message_id_ ~= 0 and Addictive(msg) then
 if not database:get(bot_id..'Cick:krh'..msg.chat_id_) then
 database:set(bot_id..":"..msg.sender_user_id_..":krh_Bots"..msg.chat_id_,"sendkrhe")
-Text = 'ارسل اسمك واسم الشخص الثاني،  \n مثال مصطفي و اروي'
+Text = 'ارسل اسمك واسم الشخص الثاني،  \n مثال ليجاند و نهي'
 send(msg.chat_id_, msg.id_,Text) 
 end
 end
@@ -12962,7 +12962,7 @@ end
 if text == "نسبه رجوله" or text == "نسبه الرجوله" and msg.reply_to_message_id_ ~= 0 and Addictive(msg) then
 if not database:get(bot_id..'Cick:rjo'..msg.chat_id_) then
 database:set(bot_id..":"..msg.sender_user_id_..":rjo_Bots"..msg.chat_id_,"sendrjoe")
-Text = 'ارسل اسم الشخص الذي تريد قياس نسبه رجولته \n مثال مصطفي'
+Text = 'ارسل اسم الشخص الذي تريد قياس نسبه رجولته \n مثال ليجاند'
 send(msg.chat_id_, msg.id_,Text) 
 end
 end
@@ -12976,7 +12976,7 @@ end
 if text == "نسبه الانوثه" or text == "نسبه انوثه" and msg.reply_to_message_id_ ~= 0 and Addictive(msg) then
 if not database:get(bot_id..'Cick:ano'..msg.chat_id_) then
 database:set(bot_id..":"..msg.sender_user_id_..":ano_Bots"..msg.chat_id_,"sendanoe")
-Text = 'ارسل اسم الشخص الذي تريد قياس نسبه انوثتها \n مثال اروي'
+Text = 'ارسل اسم الشخص الذي تريد قياس نسبه انوثتها \n مثال نهي'
 send(msg.chat_id_, msg.id_,Text) 
 end
 end
