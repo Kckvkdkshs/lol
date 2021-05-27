@@ -64,7 +64,7 @@ token = database:get(id_server..":token"),
 SUDO = database:get(id_server..":SUDO:ID"),
 UserName = database:get(id_server..":SUDO:USERNAME"),
  }
-create(config, "./Info.lua")   
+create(config, "./info.lua")   
 end 
 create_config_auto()
 token = database:get(id_server..":token")
@@ -86,7 +86,7 @@ exit 1
 fi
 if [ ! $token ]; then
 echo "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉"
-echo -e "\e[1;36mTOKEN IS NOT FIND IN FILE INFO.LUA \e[0m"
+echo -e "\e[1;36mTOKEN IS NOT FIND IN FILE info.lua \e[0m"
 echo "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉┉ ┉"
 exit 1
 fi
@@ -123,7 +123,7 @@ file:write(serialized)
 file:close() 
 end 
 local load_redis = function()  
-local f = io.open("./Info.lua", "r")  
+local f = io.open("./info.lua", "r")  
 if not f then   
 AutoSet()  
 else   
@@ -131,7 +131,7 @@ f:close()
 database:del(id_server..":token")
 database:del(id_server..":SUDO:ID")
 end  
-local config = loadfile("./Info.lua")() 
+local config = loadfile("./info.lua")() 
 return config 
 end 
 _redis = load_redis()  
@@ -148,7 +148,7 @@ print([[
 > CH › @ROMDREAM1
 ~> DEVELOPER › @a_l_q_a_lb_a_l_j_a_r_i_h
 ]])
-sudos = dofile("./Info.lua") 
+sudos = dofile("./info.lua") 
 SUDO = tonumber(sudos.SUDO)
 sudo_users = {SUDO}
 bot_id = sudos.token:match("(%d+)")  
