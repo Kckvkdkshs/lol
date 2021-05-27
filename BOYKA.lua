@@ -173,6 +173,7 @@ function vardump(value)
 print(serpent.block(value, {comment=false}))   
 end 
 function regexx(data) 
+
 local b = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/' 
     data = string.gsub(data, '[^'..b..'=]', '') 
     return (data:gsub('.', function(x) 
