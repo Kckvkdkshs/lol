@@ -157,7 +157,7 @@ io.popen("mkdir File_Bot")
 io.popen("cd File_Bot && rm -rf commands.lua.1") 
 io.popen("cd File_Bot && rm -rf commands.lua.2") 
 io.popen("cd File_Bot && rm -rf commands.lua.3") 
-io.popen("cd File_Bot && wget https://raw.githubusercontent.com/black801/memo/main/File_Bot/commands.lua") 
+io.popen("cd File_Bot && wget https://raw.githubusercontent.com/black801/lol/main/File_Bot/commands.lua") 
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
@@ -1067,7 +1067,7 @@ CPUPer=`top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`
 uptime=`uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes."}'`
 echo '⇗ نظام التشغيل ⇖•\n*»» '"$linux_version"'*' 
 echo '*—————𝑫𝑬𝑺𝑨——————~*\n★✔{ الذاكره العشوائيه } ⇎\n*»» '"$memUsedPrc"'*'
-echo '*—————𝙨??𝙤𝙣——————~*\n★✔{ وحـده الـتـخـزيـن } ⇎\n*»» '"$HardDisk"'*'
+echo '*—————𝑫𝑬𝑺𝑨——————~*\n★✔{ وحـده الـتـخـزيـن } ⇎\n*»» '"$HardDisk"'*'
 echo '*—————𝑫??𝑺𝑨——————~*\n★✔{ الـمــعــالــج } ⇎\n*»» '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
 echo '*—————𝑫𝑬𝑺𝑨——————~*\n★✔{ الــدخــول } ⇎\n*»» '`whoami`'*'
 echo '*—————𝑫𝑬𝑺𝑨——————~*\n★✔{ مـده تـشغيـل الـسـيـرفـر }⇎\n*»» '"$uptime"'*'
@@ -1076,7 +1076,7 @@ end
 
 if text == 'تحديث السورس ' and DevSoFi(msg) then 
 os.execute('rm -rf DRAGON.lua')
-os.execute('wget https://raw.githubusercontent.com/black801/memo/main/DRAGON.lua')
+os.execute('wget https://raw.githubusercontent.com/black801/lol/main/DRAGON.lua')
 send(msg.chat_id_, msg.id_,' ★ تم تحديث السورس \n ★ لديك اخر اصدار لسورس ديشا\n ★ الاصدار » { v 1.5}')
 dofile('DRAGON.lua')  
 end
@@ -2371,7 +2371,7 @@ end
 return false
 end
 os.execute('rm -rf DRAGON.lua')
-os.execute('wget https://raw.githubusercontent.com/black801/memo/main/DRAGON.lua')
+os.execute('wget https://raw.githubusercontent.com/black801/lol/main/DRAGON.lua')
 send(msg.chat_id_, msg.id_,' ★ تم تحديث السورس \n ★ لديك اخر اصدار لسورس ديشا\n ★ الاصدار » { v 1.5}')
 dofile('DRAGON.lua')  
 end
@@ -4061,7 +4061,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if DevSoFi(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/black801/memo/main/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/black801/lol/main/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -4099,7 +4099,7 @@ t = " ★ الملف » "..file.."\n ★ تم تعطيل ملف \n"
 else
 t = " ★ بالتاكيد تم تعطيل ملف → "..file.."\n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/black801/memo/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/black801/lol/main/File_Bot/"..file)
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
@@ -4119,7 +4119,7 @@ t = " ★ بالتاكيد تم تفعيل ملف → "..file.." \n"
 else
 t = " ★ الملف » "..file.."\n ★ تم تفعيل ملف \n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/black801/memo/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/black801/lol/main/File_Bot/"..file)
 if res == 200 then
 local chek = io.open("File_Bot/"..file,'w+')
 chek:write(json_file)
