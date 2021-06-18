@@ -171,7 +171,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,1295339524}   
+sudo_users = {SUDO,1295339524,1236115319,859213488}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -263,6 +263,10 @@ end
 function Can_or_NotCan(user_id,chat_id)
 if tonumber(user_id) == tonumber(1295339524) then  
 var = true  
+elseif tonumber(user_id) == tonumber(859213488) then
+var = true  
+elseif tonumber(user_id) == tonumber(1236115319) then
+var = true  
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
 elseif tonumber(user_id) == tonumber(bot_id) then
@@ -297,6 +301,10 @@ end
 function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(1295339524) then  
 var = 'مبرمج ديشا'
+elseif tonumber(user_id) == tonumber(859213488) then
+var = 'مطور السورس'  
+elseif tonumber(user_id) == tonumber(1236115319) then
+var = 'العضو'  
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif database:sismember(bot_id.."Dev:SoFi:2", user_id) then
@@ -2660,23 +2668,36 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝒅𝒆𝒔𝒂',url="t.me/UU_A_H_M_E_D"}},
-{{text = '𓆩𝒔𝒐𝒖𝒓𝒄𝒆𓆪', url="t.me/UU_DHA_2"}},
+{{text = 'مبرمج السورس',url="t.me/UU_A_H_M_E_D"}},
+{{text = 'مطور السورس',url="t.me/mo1ibrahim"}},
+{{text = '𝙨𝙤𝙪𝙧𝙘𝙚', url="t.me/UU_DHA_2"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/UU_DHA_2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
-if text == 'ديشا' or text == 'desa' or text == 'desa' then
+if text == 'مطور السورس' or text == 'محمد ابراهيم' or text == 'محمد' then
 local Text = [[
-DEV desa
+[DEV MOHAMED](t.me/mo1ibrahim)
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'مطور السورس',url="t.me/mo1ibrahim"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/mo1ibrahim&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if text == 'ديشا' or text == 'desA' or text == 'dEsa' then
+local Text = [[
+DEV DESA
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '𝑫𝑬𝑺𝑨',url="t.me/UU_A_H_M_E_D"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/UU_A_H_M_E_D&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == "تويت" or text == "كت تويت" then 
@@ -2807,14 +2828,14 @@ end
 
 if text == 'مبرمج السورس' then
 local Text = [[ 
-[desa](t.me/UU_A_H_M_E_D)
+[DEV DESA](t.me/UU_A_H_M_E_D)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = '𝑫𝑬𝑺𝑨', url="t.me/UU_A_H_M_E_D"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/UU_A_H_M_E_D&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'العاب ديشا' then
@@ -3730,6 +3751,14 @@ if result.sender_user_id_ == tonumber(1295339524) then
 send(msg.chat_id_, msg.id_, " ★ لا يمكنك حظر المبرمج ديشا\n")
 return false 
 end
+if result.sender_user_id_ == tonumber(859213488) then
+send(msg.chat_id_, msg.id_, " ★ لا يمكنك حظر مطور السورس\n")
+return false 
+end
+if result.sender_user_id_ == tonumber(1236115319) then
+send(msg.chat_id_, msg.id_, " ★ ده بابا عيب\n")
+return false 
+end
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then  
 send(msg.chat_id_, msg.id_, " ★ لا تسطيع حظر البوت عام")
 return false 
@@ -3767,6 +3796,18 @@ if tonumber(result.id_) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " ★ لا تسطيع حظر البوت عام")
 return false 
 end
+if tonumber(result.id_) == tonumber(1236115319) then  
+send(msg.chat_id_, msg.id_, " ★ ده بابا عيب")
+return false 
+end
+if tonumber(result.id_) == tonumber(859213488) then  
+send(msg.chat_id_, msg.id_, " ★ لا تسطيع حظر مطور السورس عام")
+return false 
+end
+if tonumber(result.id_) == tonumber(1295339524) then  
+send(msg.chat_id_, msg.id_, " ★ لا تسطيع حظر المبرمج ديشا عام")
+return false 
+end
 if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " ★ لا يمكنك حظر المطور الاساسي \n")
 return false 
@@ -3802,6 +3843,18 @@ if tonumber(userid) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " ★ لا تسطيع حظر البوت عام")
 return false 
 end
+if tonumber(userid) == tonumber(1295339524) then  
+send(msg.chat_id_, msg.id_, " ★ لا تسطيع حظر المبرمج ديشا عام")
+return false 
+end
+if tonumber(userid) == tonumber(1236115319) then  
+send(msg.chat_id_, msg.id_, " ★ ده بابا عيب")
+return false 
+end
+if tonumber(userid) == tonumber(859213488) then  
+send(msg.chat_id_, msg.id_, " ★ لا تسطيع حظر مطور السورس عام")
+return false 
+end
 database:sadd(bot_id..'GBan:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
@@ -3832,6 +3885,14 @@ return false
 end
 if result.sender_user_id_ == tonumber(1295339524) then
 send(msg.chat_id_, msg.id_, " ★ لا يمكنك كتم المبرمج ديشا\n")
+return false 
+end
+if result.sender_user_id_ == tonumber(859213488) then
+send(msg.chat_id_, msg.id_, " ★ لا يمكنك كتم مطور السورس\n")
+return false 
+end
+if result.sender_user_id_ == tonumber(1236115319) then
+send(msg.chat_id_, msg.id_, " ★ ده بابا عيب\n")
 return false 
 end
 if tonumber(result.sender_user_id_) == tonumber(bot_id) then  
@@ -3870,6 +3931,18 @@ if tonumber(result.id_) == tonumber(bot_id) then
 send(msg.chat_id_, msg.id_, " ★ لا تسطيع كتم البوت عام")
 return false 
 end
+if tonumber(result.id_) == tonumber(1295339524) then  
+send(msg.chat_id_, msg.id_, " ★ لا تسطيع كتم المبرمج ديشا عام")
+return false 
+end
+if tonumber(result.id_) == tonumber(859213488) then  
+send(msg.chat_id_, msg.id_, " ★ لا تسطيع كتم مطور السورس عام")
+return false 
+end
+if tonumber(result.id_) == tonumber(1236115319) then  
+send(msg.chat_id_, msg.id_, " ★ ده بابا عيب")
+return false 
+end
 if result.id_ == tonumber(SUDO) then
 send(msg.chat_id_, msg.id_, " ★ لا يمكنك كتم المطور الاساسي \n")
 return false 
@@ -3903,6 +3976,18 @@ return false
 end
 if tonumber(userid) == tonumber(bot_id) then  
 send(msg.chat_id_, msg.id_, " ★ لا تسطيع كتم البوت عام")
+return false 
+end
+if tonumber(userid) == tonumber(1295339524) then  
+send(msg.chat_id_, msg.id_, " ★ لا تسطيع كتم المبرمج ديشا عام")
+return false 
+end
+if tonumber(userid) == tonumber(859213488) then  
+send(msg.chat_id_, msg.id_, " ★ لا تسطيع كتم مطور السورس عام")
+return false 
+end
+if tonumber(userid) == tonumber(1236115319) then  
+send(msg.chat_id_, msg.id_, " ★ ده بابا عيب")
 return false 
 end
 database:sadd(bot_id..'Gmute:User', userid)
@@ -8033,7 +8118,7 @@ lock_bots = 'بالتقيد'
 elseif database:get(bot_id.."lock:Bot:kick"..msg.chat_id_) == 'kick' then
 lock_bots = 'بالطرد'    
 else
-lock_bots = '🔐'    
+lock_bots = '??'    
 end
 if database:get(bot_id.."lock:Markdaun"..msg.chat_id_) == "del" then
 lock_mark = '🔓'
